@@ -1,0 +1,14 @@
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\bin\Debug\Wrappanel.exe.config
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel.csprojResolveAssemblyReference.cache
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\MainWindow.g.cs
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\App.g.cs
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel_MarkupCompile.cache
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel_MarkupCompile.lref
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel.exe
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel.pdb
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\bin\Debug\Wrappanel.exe
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\bin\Debug\Wrappanel.pdb
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\MainWindow.baml
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel.g.resources
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel.Properties.Resources.resources
+\\mycloud.informatik.fh-nuernberg.de\Students\seizsa61777\Downloads\Wrappanel\Wrappanel\obj\Debug\Wrappanel.csproj.GenerateResource.Cache
