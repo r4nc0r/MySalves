@@ -8,15 +8,28 @@ public class PlayerController_new : MonoBehaviour
   private int count;
   public Text countText;
   public Text winText;
+
   public float forwardSpeed;
   public float straveSpeed;
   public int turnSpeed;
+
+  public GameObject shot;
+  public Transform shotSpawn;
+  public float fireRate;
+  public float NextShot;
   void Start()
   {
     count = 0;
     SetCountText();
     winText.text = "";
-
+  }
+  void Update()
+  {
+    if (Input.GetButton("Fire1") && NextShot <= Time.time)
+    {
+      NextShot = Time.time + fireRate;
+      Instantiate(shot, shotSpawn.position, shotSpawn.rotation);
+    }
   }
   void FixedUpdate()
   {
@@ -49,7 +62,7 @@ public class PlayerController_new : MonoBehaviour
     if (other.gameObject.CompareTag("Pick Up"))
     {
       other.gameObject.SetActive(false);
-      count++;
+      AddToCount();
       SetCountText();
     }
   }
@@ -60,6 +73,10 @@ public class PlayerController_new : MonoBehaviour
     {
       winText.text = "You win";
     }
+  }
+  public void AddToCount()
+  {
+    count++;
   }
 }
 
