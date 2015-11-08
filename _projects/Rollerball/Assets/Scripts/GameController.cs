@@ -3,24 +3,31 @@ using System.Collections;
 
 public class GameController : MonoBehaviour {
 
-  public GameObject pickUps;
-  public Vector3 spawnValues;
-  public int PickUpsCount;
-  
-  void Start()
-  {
-    //SpawnPickUps();
-  }
+    public GameObject Player;
+    public GameObject Boundary;
+    private Vector3 offset;
+    private Vector3 Pos = new Vector3();
+    public GameObject Asteroids;
 
-  //void SpawnPickUps()
-  //{
-  //  for (int i = 0; i < 100; i++)
-  //  {
-  //    Vector3 spawnPosition = new Vector3(Random.Range(-spawnValues.x, spawnValues.x), spawnValues.y, Random.Range(-spawnValues.z, spawnValues.z));
-  //    Quaternion rotation = Quaternion.identity;
-  //    Instantiate(pickUps, spawnPosition, rotation);
-  //  }
-  //}
-
+    void Start()
+    {
+        offset = transform.position - Player.transform.position;
+        SpawnAsteroids();
+    }
+    void SpawnAsteroids()
+    {
+        if (GameObject.FindGameObjectsWithTag("Asteroid").Length < 1)
+        {
+            Vector3 spawnPosition = new Vector3(Random.Range(-Pos.x + 40, Pos.x + 40), 1, Pos.z + 40);
+            Quaternion spawnRotation = Quaternion.identity;
+            Instantiate(Asteroids, spawnPosition, spawnRotation);
+        }
+    }
+    void Update()
+    {
+        transform.position = Player.transform.position + offset;
+        Pos = Boundary.transform.position;
+        SpawnAsteroids();
+    }
 
 }
