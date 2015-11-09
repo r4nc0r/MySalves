@@ -12,7 +12,7 @@ public class BondaryController : MonoBehaviour
   void Start()
   {
     offset = transform.position - Player.transform.position;
-    SpawnPickUps();
+//    SpawnPickUps();
   }
 
   // Update is called once per frame
@@ -20,7 +20,7 @@ public class BondaryController : MonoBehaviour
   {
     transform.position = Player.transform.position + offset;
     Pos=Boundary.transform.position;
-    SpawnPickUps();
+//    SpawnPickUps();
   }
 
   void SpawnPickUps()
