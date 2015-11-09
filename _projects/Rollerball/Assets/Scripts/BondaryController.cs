@@ -25,20 +25,11 @@ public class BondaryController : MonoBehaviour
 
   void SpawnPickUps()
   {
-    if(GameObject.FindGameObjectsWithTag("Pick Up").Length<1)
+    if(GameObject.FindGameObjectsWithTag("Pick Up").Length<15)
     { 
       Vector3 spawnPosition = new Vector3(Random.Range(-Pos.x+40, Pos.x+40), 1, Random.Range(-Pos.z+40, Pos.z+40));
       Quaternion rotation = Quaternion.identity;
       Instantiate(pickUps, spawnPosition, rotation);
     }
   }
-  
-  void OnTriggerExit(Collider other)
-    {
-        if (other.gameObject.CompareTag("Bolt")|| other.gameObject.CompareTag("Asteroid"))
-        {
-            Destroy(other.gameObject);
-        }
-    }
-
 }
