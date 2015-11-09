@@ -5,7 +5,9 @@ using System.Collections;
 public class PlayerController_new : MonoBehaviour
 {
   public static Vector3 PlayerPos = new Vector3(0, 0, 0);
-
+  private int count;
+  public Text countText;
+  public Text winText;
 
   public float forwardSpeed;
   public float straveSpeed;
@@ -17,6 +19,9 @@ public class PlayerController_new : MonoBehaviour
   public float NextShot;
   void Start()
   {
+    count = 0;
+    SetCountText();
+    winText.text = "";
   }
   void Update()
   {
@@ -48,8 +53,30 @@ public class PlayerController_new : MonoBehaviour
 
     transform.Translate(Forward * forwardSpeed);
     transform.Rotate(new Vector3(0, 1, 0), turning * turnSpeed * Time.deltaTime);
+
+
     PlayerPos = transform.position;
   }
-
+  void OnTriggerEnter(Collider other)
+  {
+    if (other.gameObject.CompareTag("Pick Up"))
+    {
+      other.gameObject.SetActive(false);
+      AddToCount();
+      SetCountText();
+    }
+  }
+  void SetCountText()
+  {
+    countText.text = "Count: " + count.ToString();
+    if (count >= 12)
+    {
+      winText.text = "You win";
+    }
+  }
+  public void AddToCount()
+  {
+    count++;
+  }
 }
 

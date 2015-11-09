@@ -15,7 +15,8 @@ public class BoltMover : MonoBehaviour {
   {
     if (other.gameObject.CompareTag("Pick Up"))
     {
-            Destroy(other.gameObject);
+      other.gameObject.SetActive(false);
+      this.gameObject.SetActive(false);
     }
   }
 }
