@@ -22,4 +22,15 @@ public class BoltMover : MonoBehaviour {
 //			this.gameObject.SetActive(false);
 		}
 	}
+<<<<<<< HEAD
 }
+=======
+  void OnTriggerEnter(Collider other)
+  {
+    if (other.gameObject.CompareTag("Pick Up"))
+    {
+            Destroy(other.gameObject);
+    }
+  }
+}
+>>>>>>> refs/remotes/origin/master
