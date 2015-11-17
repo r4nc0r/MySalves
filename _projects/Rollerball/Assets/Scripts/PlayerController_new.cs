@@ -15,8 +15,15 @@ public class PlayerController_new : MonoBehaviour
   public Transform shotSpawn;
   public float fireRate;
   public float NextShot;
-  void Start()
+  public Text pointsText;
+  public Text moneyText;
+
+  public int Points { get; set; }
+  public int Money { get; set; }
+    void Start()
   {
+        Points = 0;
+        Money = 0;
   }
   void Update()
   {
@@ -51,5 +58,13 @@ public class PlayerController_new : MonoBehaviour
     PlayerPos = transform.position;
   }
 
+    public void SetMoneyText()
+    {
+        pointsText.text = "Money: " + moneyText.ToString();
+    }
+    public void SetPointText(int p)
+    {
+     pointsText.text = "Punkte: " + p.ToString();
+    }
 }
 

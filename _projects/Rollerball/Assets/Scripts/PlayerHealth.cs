@@ -7,11 +7,12 @@ public class PlayerHealth : MonoBehaviour
     public int startingHealth = 100;
     public int currentHealth;
     public Slider healthSlider;
-    public GameObject Player;
+    GameObject Player;
     public Text deathText;
 
     void Awake ()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
         currentHealth = startingHealth;
     }
 

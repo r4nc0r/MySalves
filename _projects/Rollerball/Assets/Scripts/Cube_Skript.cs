@@ -6,14 +6,14 @@ public class Cube_Skript : MonoBehaviour
 {
 
     public int attackDamage = 5;
-    public GameObject Player;
+    GameObject Player;
     PlayerHealth playerHealth;
     bool playerInRange;
     public Text myText;
 
     void Awake()
     {
-        //Player = GameObject.FindGameObjectWithTag("Player");
+        Player = GameObject.FindGameObjectWithTag("Player");
         playerHealth = Player.GetComponent<PlayerHealth>();
     }
 
@@ -22,6 +22,8 @@ public class Cube_Skript : MonoBehaviour
         if (other.tag == "Player")
         {
             playerInRange = true;
+            Attack();
+            Destroy(gameObject);
 
         }
         else if (other.tag == "Bolt")
@@ -41,6 +43,7 @@ public class Cube_Skript : MonoBehaviour
     }
     void Attack()
     {
+        SendMessage("TakeDamage", attackDamage);
         if (playerHealth.currentHealth > 0)
         {
             playerHealth.TakeDamage(attackDamage);
